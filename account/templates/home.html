@@ -1,0 +1,178 @@
+{% extends 'navbar.html' %}
+{% load static %}
+
+{% block nav %}
+    {%if messages%}
+        {% for i in messages %}
+            {%if i.level == DEFAULT_MESSAGE_LEVELS.SUCCESS%}
+            <div class="alert alert-success alert-dismissible">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong>{{i}}</strong>
+            </div>
+            {%endif%}
+            {%if i.level == DEFAULT_MESSAGE_LEVELS.ERROR%}
+            <div class="alert alert-danger alert-dismissible">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong>{{i}}</strong>
+            </div>
+            {%endif%}
+        {% endfor %}
+    {%endif%}
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner card">
+          <div class="carousel-item active">
+            <img src="{% static 'images/music.webp' %}" class="d-block w-100" alt="..." height="665px">
+            <div class="carousel-caption d-none d-md-block card-img-overlay">
+              <h2 style="font-style: italic;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Musical Events</h2>
+              <a href="#"  class="stretched-link"></a>
+              <p>Some representative placeholder content for the first slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'images/workshop.jpeg' %}" class="d-block w-100" alt="..." height="665px">
+            <div class="carousel-caption d-none d-md-block card-img-overlay">
+              <h3 style="color: black;font-style: italic;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Workshop</h3>
+              <a href="#"  class="stretched-link"></a>
+              <p style="color: black;font-style: italic;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Some representative placeholder content for the second slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'images/conferences.jpeg' %}" class="d-block w-100" alt="..." height="665px">
+            <div class="carousel-caption d-none d-md-block card-img-overlay">
+              <h2 style="font-style: italic;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Conferences</h2>
+              <a href="#"  class="stretched-link"></a>
+              <p>Some representative placeholder content for the third slide.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    
+    <section class="ulockd-footer2">
+
+      <div class="container">
+  
+        <div class="row">
+  
+          <div class="col-xxs-12 col-xs-6 col-sm-6 col-md-3 col-lg-4">
+  
+            <div class="footer-fst-col" style="color: aliceblue;">
+  
+              <h3> ElevateEvents </h3>
+  
+              <p>Elevate Events Pvt Ltd is passionate about crafting charmingly timeless and elegant luxurious weddings and events at stunning venues throughout the world. As the leading wedding designers and event organisers in Oregon and Kerala, we are renowned to create authentic experiences worth cherishing for a lifetime.</p>
+  
+              
+  
+              <!-- <div class="ulockd-footer-newsletter">
+  
+                
+                <span><b class="news-info-cls">Subscribe to our newsletter</b><br> to receive exclusive offers.</span>
+                <form method="post" action="" class="ulockd-mailchimp style2">
+  
+                  <div class="input-group">
+  
+                    <input type="email" class="form-control input-md bgc-snowshade2" placeholder="Your email" name="email" value="" required>
+  
+                    <span class="input-group-btn">
+  
+                    <button type="submit" class="btn btn-md"><i class="icon flaticon-right-arrow"></i></button>
+  
+                    </span> </div>
+  
+                </form>
+  
+              </div> -->
+  
+            </div>
+  
+          </div>
+
+          <div class="col-xxs-12 col-xs-6 col-sm-6 col-md-3 col-lg-3" style="color: aliceblue;position: relative;left: 100px;">
+  
+            <div class="footer-contact">
+  
+              <h3 class="text-uppercase"><span class="color-black33">CONTACT US</span></h3>
+  
+              <p>DLF PHASE - 2 L-25/9<br>
+                4195 Eola Dr NW, Salem, OR 97304, United States</p>
+  
+              <!--<div class="ftr-phone"><span>Phone </span>: <a href="#"> +91-1164642222</a></div>-->
+  
+              <!--<div class="ftr-fax"><span>Mobile No </span>: <a href="#">+91-1164643333</a></div>-->
+  
+              <div class="ftr-mail"><span>Email </span>: <a href="mailTo:info@v3events.in"> info@elevateevents.in </a></div>
+  
+              <ul class="list-group list-group-horizontal footer-font-icon style2 ulockd-mrgn1215">
+                <li class="list-group-item bg-dark rounded-pill"><a class="fb-color" href="#" target="_blank"><i class="fa fa-facebook" style="border-radius: 50%;"></i></a></li>
+                <li class="list-group-item bg-dark rounded-pill"><a class="tw-color" href="#" target="_blank"><i class="fa fa-twitter" style="border-radius: 50%;color: white;"></i></a></li>
+                <li class="list-group-item bg-dark rounded-pill"><a class="color-white pin-color" href="#" target="_blank"><i class="fa fa-pinterest" style="border-radius: 50%;background: #cb2027;color: white;"></i></a></li>
+                <li class="list-group-item bg-dark rounded-pill"><a class="insta-color" href="#"><i class="fa fa-instagram" target="_blank"></i></a></li>
+                <li class="list-group-item bg-dark rounded-pill"><a class="color-white you-color" href="https://www.youtube.com/channel/UCx0FFz7EvyHOo266X_QYR_g" target="_blank"><i class="fa fa-youtube-square"></i></a></li>
+  
+              </ul>
+  
+            </div>
+  
+          </div>
+  
+          <div class="col-xxs-12 col-xs-6 col-sm-6 col-md-3 col-lg-3" style="position: relative;left: 200px;"> 
+  
+            <div class="footer-twitter">
+  
+              <h3 class="text-uppercase"><span class="color-black33" style="color: aliceblue;">Map Location</span></h3>
+  
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2824.1471309773447!2d-123.11820472386918!3d44.94067687107017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54c0019b0c1522f7%3A0xc2933fb861d3a796!2sElevate%20Events%2C%20LLC!5e0!3m2!1sen!2sin!4v1705301411976!5m2!1sen!2sin" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  
+            </div>
+  
+          </div>
+  
+        </div>
+  
+      </div>
+  
+    </section>
+    <section class="ulockd-copy-right">
+
+      <div class="container">
+  
+        <div class="row">
+  
+          <div class="col-md-12">
+  
+            <p class="text-white" style="position: relative;left: 370px;">Copyright© Elevate Events PVT.LTD 2018, All right reserved. | <a href="privacy-policy.php">Privacy Policy</a></p> 
+  
+          </div>
+  
+        </div>
+  
+      </div>
+  
+    </section>
+
+    
+    <!-- <div class="card" style="width: 1000px; height: 665px;">
+        <img src="{% static 'images/music.webp' %}" alt="" class="card-img-top">
+        <div class="card-img-overlay">
+            <h3 class="card-title">Title</h3>
+            <p class="card-text">Card content</p>
+            <a href="" class="stretched-link"></a>
+        </div>
+    </div> -->
+    
+
+
+{% endblock nav %}

@@ -1,0 +1,91 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+
+  <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body style="background-color:black;">
+    <nav class="navbar navbar-expand-lg navbar-dark gradient-custom">
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+          <!-- Toggle button -->
+          <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+            data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="fas fa-bars text-light"></i>
+          </button>
+          <img src="{% static 'images/elevate.png' %}" alt="" width="25%" style="position: absolute; top: 0%; height: 85px;left: -15px;">
+      
+          <!-- Collapsible wrapper -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Left links -->
+            <!-- Left links -->
+            <!-- Right links -->
+            <div class="dropdown dropstart" style="position: absolute;">
+              <button type="button" class="btn dropdown-toggle text-light" data-bs-toggle="dropdown" style="position: relative;left: 800px;top: 15px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: medium;">
+                More
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark" style="position: absolute;left: 650px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: medium;">
+                <li><a class="dropdown-item" href="#">Login</a></li>
+                <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
+                <li><a class="dropdown-item" href="#">My Booking</a></li>
+              </ul>
+            </div>
+            <ul class="navbar-nav ms-auto d-flex flex-row mt-3 mt-lg-0">
+              <li class="nav-item text-center mx-2 mx-lg-1" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: medium;position: absolute; left: 930px;top: 15%;">
+                <a class="nav-link active text-light" aria-current="page" href="{% url 'home' %}">
+                  <div>
+                    <i class="fa fa-home fa-lg mb-1"></i>
+                  </div>
+                  Home
+                </a>
+              </li>
+              <li class="nav-item text-center mx-2 mx-lg-1">
+                <a class="nav-link active text-light" href="#!" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: medium;position: relative;top: 8%;">
+                  <div>
+                    <i class="fa fa-bell fa-lg mb-1"></i>
+                    <span class="badge rounded-pill badge-notification bg-danger">11</span>
+                  </div>
+                  Notification
+                </a>
+              </li>
+            </ul>
+            <!-- Right links -->
+      
+            <!-- Search form -->
+            <form class="d-flex input-group w-auto ms-lg-3 my-3 my-lg-0">
+              <input type="search" class="form-control" placeholder="Search for Events,Plays and Activities" aria-label="Search" />
+              <button class="btn btn-info" type="button" data-mdb-ripple-color="dark" style="width: 30%;height: 50px;position: relative;top: 8px;">
+                Search
+              </button>
+            </form>
+          </div>
+          <!-- Collapsible wrapper -->
+        </div>
+        <!-- Container wrapper -->
+      </nav>
+
+    {% block nav %}
+    {% endblock nav%}
+</body>
+
+</html>
